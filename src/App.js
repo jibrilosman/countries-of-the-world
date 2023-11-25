@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import "./App.css";
+import { useData } from "./context/DataContext";
+import Detail from "./components/details/Detail";
+import Home from "./Home";
+import Layout from "./components/Layout";
 
 function App() {
+  const { theme } = useData();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className={theme}>
+      <BrowserRouter>   
+        <Routes>
+          <Route path="/" element={<Layout />} >
+            <Route path="/" element={<Home />} />
+            <Route path="/detail/:id" element={<Detail />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
+    </>
   );
 }
 
 export default App;
+
+// <div className={theme}>
+// <Router>
+//   <Header />
+//   <Search />
+//   <Routes>
+//       <Route path="/"  element={ <Main />} />
+//       <Route path="/detail" element={<Detail />} />
+//   </Routes>
+// </Router>
+// </div>
