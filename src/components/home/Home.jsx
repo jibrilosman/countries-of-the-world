@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./Search.css";
+import "./Home.css";
 import "../../App.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useData } from "../../context/DataContext";
 import { useNavigate } from "react-router-dom";
 
-const Search = () => {
+const Home = () => {
   const { data } = useData();
   const [loadingCountries, setLoadingCountries] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -97,4 +97,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Home;

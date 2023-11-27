@@ -6,7 +6,7 @@ import {
 import "./App.css";
 import { useData } from "./context/DataContext";
 import Detail from "./components/details/Detail";
-import Home from "./Home";
+import Home from "./components/home/Home";
 import Layout from "./components/Layout";
 
 function App() {
