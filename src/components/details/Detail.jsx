@@ -14,6 +14,7 @@ const Detail = () => {
   const handleArrowClick = () => {
     window.history.back();
   };
+ 
 
   return (
     <>
@@ -68,6 +69,18 @@ const Detail = () => {
                         </span>
                       ))}
                     </p>
+                    <p>
+                      Currencies:{" "}
+                      {Object.values(item.currencies).map((curr, currIndex) => (
+                        <span key={currIndex}>
+                          
+                          {` " ${curr.symbol} "  ${curr.name}`}
+                          {currIndex < Object.values(item.currencies).length - 1
+                            ? ", "
+                            : ""}
+                        </span>
+                      ))}
+                    </p>
 
                     <p>
                       Borders:{" "}
@@ -75,7 +88,7 @@ const Detail = () => {
                         ? Object.values(item.borders).map(
                             (border, borderIndex) => (
                               <span key={borderIndex}>
-                                {border}
+                                <button style={{padding:"4px", borderRadius:"2px"}}>{border}</button>
                                 {borderIndex <
                                 Object.values(item.borders).length - 1
                                   ? ", "
