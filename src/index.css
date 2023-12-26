@@ -103,6 +103,7 @@ article {
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
+    cursor: pointer;
   }
   .dark#main {
     background: var(--very-dark-blue);
