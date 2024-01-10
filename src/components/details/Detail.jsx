@@ -122,92 +122,33 @@ const Detail = () => {
                           )
                         : ""}
                     </p>
+
+                    <div>
+                      maps:{" "}
+                      {item.maps
+                        ? Object.values(item.maps).map(
+                            (map, mapIndex) => (
+                              <span key={mapIndex}>
+                                <a href={map} target="_blank" rel="noreferrer">
+                                  {Object.values(item.maps).length > 1
+                                    ? `map ${mapIndex + 1}`
+                                    : "map"}
+                                </a>
+                                {mapIndex <
+                                Object.values(item.maps).length - 1
+                                  ? ", "
+                                  : ""}
+                              </span>
+                            ) 
+                          )
+                        : ""}
+                    </div>
                   </div>
                 </div>
               </article>
             ))
         )}
 
-
-
-        {/* {data &&
-          data
-            .filter((item) => item.name.common === id)
-            .map((item, index) => (
-              <article key={index} className="ct">
-                <div className="image">
-                  <img src={item.flags.png} alt={item.name.common} />
-                </div>
-                <div className="info-detail">
-                  <div className="column">
-                    <h2>{item.name.common}</h2>
-                    <p>
-                      <strong>Native Name:</strong> {item.name.common}
-                    </p>
-                    <p>
-                      <strong>Population:</strong>{" "}
-                      {formatPopulation(item.population)}
-                    </p>
-                    <p>
-                      <strong>Region:</strong>
-                      {item.region}
-                    </p>
-                    <p>
-                      <strong>Sub Region: </strong>
-                      {item.subregion}
-                    </p>
-                    <p>
-                      <strong>Capital:</strong> {item.capital}
-                    </p>
-                  </div>
-                  <div className="column">
-                    <p>
-                      <strong>Top Level Domain:</strong> {item.tld}
-                    </p>
-                    <p>
-                      Languages:{" "}
-                      {Object.values(item.languages).map((lang, langIndex) => (
-                        <span key={langIndex}>
-                          {lang}
-                          {langIndex < Object.values(item.languages).length - 1
-                            ? ", "
-                            : ""}
-                        </span>
-                      ))}
-                    </p>
-                    <p>
-                      Currencies:{" "}
-                      {Object.values(item.currencies).map((curr, currIndex) => (
-                        <span key={currIndex}>
-                          
-                          {` " ${curr.symbol} "  ${curr.name}`}
-                          {currIndex < Object.values(item.currencies).length - 1
-                            ? ", "
-                            : ""}
-                        </span>
-                      ))}
-                    </p>
-
-                    <p>
-                      Borders:{" "}
-                      {item.borders
-                        ? Object.values(item.borders).map(
-                            (border, borderIndex) => (
-                              <span key={borderIndex}>
-                                <button style={{padding:"4px", borderRadius:"2px"}}>{border}</button>
-                                {borderIndex <
-                                Object.values(item.borders).length - 1
-                                  ? ", "
-                                  : ""}
-                              </span>
-                            )
-                          )
-                        : ""}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}  */}
       </div>
     </>
   );
