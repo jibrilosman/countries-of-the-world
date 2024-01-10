@@ -42,7 +42,7 @@ const Detail = () => {
         </div>
 
         {loading ? (
-          <div className="loading">Loading...</div>
+          <div className="loading"><h1>Loading...</h1></div>
         ) : (
           data &&
           data
