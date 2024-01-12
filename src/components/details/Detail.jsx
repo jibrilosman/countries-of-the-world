@@ -130,9 +130,11 @@ const Detail = () => {
                             (map, mapIndex) => (
                               <span key={mapIndex}>
                                 <a href={map} target="_blank" rel="noreferrer">
-                                  {Object.values(item.maps).length > 1
-                                    ? `map ${mapIndex + 1}`
-                                    : "map"}
+                                  {Object.keys(item.maps)[mapIndex]
+                                    .charAt(0)
+                                    .toUpperCase() +
+                                    Object.keys(item.maps)[mapIndex].slice(1)}
+
                                 </a>
                                 {mapIndex <
                                 Object.values(item.maps).length - 1
