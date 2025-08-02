@@ -14,7 +14,7 @@ const Header = () => {
       <h1 className="header-title">Where in the world?</h1>
       <Link className="header-theme" onClick={toggleTheme}>
         {theme === "light" ? <MdDarkMode className="icon" />  : <FiSun className="icon"/>}
-        {theme === "dark" ? "Dark Mode" : "Light Mode"}
+        {theme === "dark" ? "Light Mode" : "Dark Mode"}
        
       </Link>
     </div>
