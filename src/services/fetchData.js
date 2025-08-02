@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const apiUrl = 'https://restcountries.com/v3.1/all'
+// const apiUrl = 'https://restcountries.com/v3.1/all'
+const apiUrl = 'https://restcountries.com/v3.1/independent?status=true'
 
 const fetchData = async () => {
   
