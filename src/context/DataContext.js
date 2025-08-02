@@ -7,7 +7,7 @@ const DataContext = createContext();
 
 export const DataProvider = (props) => {
   const [data, setData] = useState([]);
-  const [theme , setTheme] = useState('light');
+  const [theme , setTheme] = useState('dark');
   
   useEffect(() => {
       fetchData()
