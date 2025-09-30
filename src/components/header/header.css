@@ -48,3 +48,6 @@
   background: var(--dark-gray);
   color: var(--white);
 }
+#header.light a {
+  color: var(--very-dark-blue-text);
+}
