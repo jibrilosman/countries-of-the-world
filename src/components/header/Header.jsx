@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div id="header" className={theme}>
-      <a href="/">
+      <a className="header-title" href="/">
       <h1 className="header-title">Where in the world?</h1>
       </a>
       <Link className="header-theme" onClick={toggleTheme}>
